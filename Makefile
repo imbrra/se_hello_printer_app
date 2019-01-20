@@ -22,3 +22,11 @@ docker_run: docker_build
 		-p 5000:5000 \
 		-d hello-world-printer
 
+USERNAME=imbrra
+TAG=$(USERNAME)/hello-world-se_hello_printer_app
+
+docker_push: docker_build
+	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
+	docker tag hello-world-printer $(TAG); \
+	docker push $(TAG); \
+	docker logout;
