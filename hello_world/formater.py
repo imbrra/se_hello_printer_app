@@ -23,16 +23,17 @@ def get_formatted(msg, imie, format):
     return result
 
 
-
 def format_to_json(msg, imie):
     return ('{ "imie":"' + imie + '", "mgs":"' +
             msg + '"}')
+
 
 def format_to_xml(msg, imie):
     return ("""<greetings>
                 <name="Jakub">Jakub</name>
                 <msg="Hello">Hello</msg>
             </greetings>""")
+
 
 def plain_text(msg, imie):
     return imie + ' ' + msg
