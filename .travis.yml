@@ -12,3 +12,9 @@ script:
         - make test
         - make docker_build
         - make docker_push
+
+deploy:
+  provider: heroku
+  app: imitless-temple-54012
+  api_key:
+    secure: ${11235058-c22f-42ca-8581-3035e6b5baba}
