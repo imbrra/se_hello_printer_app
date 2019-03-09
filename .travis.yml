@@ -17,4 +17,4 @@ deploy:
   provider: heroku
   app: imitless-temple-54012
   api_key:
-    secure: ${11235058-c22f-42ca-8581-3035e6b5baba}
+    secure: ${HEROKU_API_KEY}
